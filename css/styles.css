@@ -316,7 +316,7 @@ Services
 ===============
 */
 
-#services {
+.services {
   background: var(--clr-grey-10);
 }
 
@@ -384,6 +384,82 @@ Services
 Featured Tours
 ===============
 */
+.tour-card {
+  box-shadow: var(--light-shadow);
+  background: var(--clr-grey-10);
+  transition: var(--transition);
+  margin-bottom: 2rem;
+}
+
+.tour-card:hover {
+  box-shadow: var(--dark-shadow);
+  transform: scale(1.02)
+}
+
+.tour-info {
+  padding: 1.25rem 1.5rem;
+}
+
+.tour-image {
+  height: 15rem;
+  object-fit: cover;
+}
+
+.tour-image-container {
+  position: relative;
+}
+
+.tour-image-container span {
+  background: var(--clr-primary-7);
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 0;
+}
+
+.tour-heading,
+.tour-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.date {
+  color: var(--clr-grey-7);
+}
+
+.tour-footer span {
+  text-transform: capitalize;
+  color: var(--clr-primary-5);
+  line-height: 0;
+  margin-bottom: 0;
+}
+
+.tour-btn{
+  text-align: center;
+}
+
+@media screen and (min-width:768px) {
+  .featured-center {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap
+  }
+
+  .tour-card {
+    flex: 0 0 calc(50% - 2rem);
+  }
+
+
+}
+
+@media screen and (min-width:1170px) {
+  .tour-card {
+    flex: 0 0 calc(33.33% - 2rem);
+  }
+}
 
 /*
 =============== 
